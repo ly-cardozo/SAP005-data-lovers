@@ -13,7 +13,8 @@ displayCards(data.pokemon)
 
 function displayCards(pokemons) {
     let printCards = document.querySelector('#print-cards')
-    
+    printCards.innerHTML = ''
+
     for (let pokemon of pokemons) {
         const div = document.createElement("div")
 
