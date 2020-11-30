@@ -7,6 +7,7 @@ import {
   selectResistant,
   selectWeaknesses,
   search,
+  getPercentage,
 } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
@@ -27,6 +28,20 @@ displayCards(data.pokemon);
 function displayCards(pokemons) {
   let printCards = document.querySelector("#print-cards");
   printCards.innerHTML = "";
+
+  const totalOfPokemons = data.pokemon.length;
+  const filteredPokemons = pokemons.length;
+  const filteredQuantityElement = document.getElementById("filtered-quantity");
+  filteredQuantityElement.innerHTML = "";
+
+  if (filteredPokemons < totalOfPokemons) {
+    const filteredQuantityText = document.createElement("p");
+    filteredQuantityText.innerText = `Foram encontrados ${filteredPokemons} de ${totalOfPokemons} pokémons (${getPercentage(
+      filteredPokemons,
+      totalOfPokemons
+    ).toFixed(2)}%).`;
+    filteredQuantityElement.append(filteredQuantityText);
+  }
 
   for (let pokemon of pokemons) {
     const div = document.createElement("div");

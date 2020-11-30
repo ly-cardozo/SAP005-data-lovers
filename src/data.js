@@ -47,6 +47,8 @@ export const search = (searchName, data) => {
   return data.filter((object) => object.name.startsWith(searchName));
 };
 
+export const getPercentage = (quantity, total) => (quantity * 100) / total;
+
 // NOTAS:
 
 // 1. O método includes() determina se um array/objeto contém um determinado elemento ou não, retornando true ou false, respectivamente.
