@@ -27,24 +27,21 @@ export const sortPokemonsByNumDescending = (data) => {
 };
 
 export const selectType = (selectByType, data) => {
-  const result = data.filter((pokemon) => pokemon.type.includes(selectByType));
-  return result;
+  return data.filter((select) => select.type.includes(selectByType));
 };
 
 export const selectResistant = (selectByResistant, data) => {
-  return data.filter((pokemon) =>
-    pokemon.resistant.includes(selectByResistant)
-  );
+  return data.filter((select) => select.resistant.includes(selectByResistant));
 };
 
 export const selectWeaknesses = (selectByWeaknesses, data) => {
-  return data.filter((pokemon) =>
-    pokemon.weaknesses.includes(selectByWeaknesses)
+  return data.filter((select) =>
+    select.weaknesses.includes(selectByWeaknesses)
   );
 };
 
 export const search = (searchName, data) => {
-  return data.filter((object) => object.name.startsWith(searchName));
+  return data.filter((search) => search.name.startsWith(searchName));
 };
 
 export const getPercentage = (quantity, total) => (quantity * 100) / total;
