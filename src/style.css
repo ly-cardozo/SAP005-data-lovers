@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #b4c5f6;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/* .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vh;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+} */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* o card quebra p linha de baixo se diminuir o espaço da tela*/
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%; /* 100% centraliza mais precisa subir e side bar já ocupa 15% */
+    margin-top: 40px
+}
+.cards {
+    width: 70vw;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px;
+    justify-content: flex-end;
+    align-content: center;
+    text-transform: uppercase;
+}
+
+/* @media screen and (min-width:480px) */

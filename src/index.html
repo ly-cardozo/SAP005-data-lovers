@@ -3,15 +3,26 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Pokémon</title>
   <link rel="icon" href="favicon/Pokémon 002.ico">
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
+  <link rel="stylesheet" href="https://www.dafont.com/pt/pokemon.font?text=Guia+do+Mestre+Pok%E9mon">
 </head>
 
 <body class="body">
+  <div id="root"></div>
+  <div>
+    <header>
+        <h1 class="title">GUIA DO MESTRE POKÉMON</h1>
+    </header>
+  </div>
+
   <section class="select-options">
     <div>
-      <select name="orderly-search" class="select-orderly" id="select-orderly">
+      <select name="orderly-search" class="orderly" id="orderly-select">
         <option class="disabled" disabled selected value>Ordernar por...</option>
         <option value="NameAscending">A-Z</option>
         <option value="NameDescending">Z-A</option>
@@ -21,7 +32,7 @@
     </div>
 
     <div>
-      <select name="filter-type" class="select-filter" id="select-filter-type">
+      <select name="filter-type" class="filter" id="filter-select-type">
         <option class="disabled" disabled selected value>Filtrar por Tipo</option>
         <option value="water">Água</option>
         <option value="dragon">Dragão</option>
@@ -45,7 +56,7 @@
     </div>
 
     <div>
-      <select name="filter-resistant" class="select-filter" id="select-filter-resistant">
+      <select name="filter-resistant" class="filter" id="filter-select-resistant">
         <option class="disabled" disabled selected value>Filtrar por Resistência</option>
         <option value="water">Água</option>
         <option value="dragon">Dragão</option>
@@ -56,7 +67,7 @@
         <option value="ice">Gelo</option>
         <option value="bug">Inseto</option>
         <option value="fighting">Lutador</option>
-        <option value="stell">Metálico</option>
+        <option value="steel">Metálico</option>
         <option value="normal">Normal</option>
         <option value="dark">Noturno</option>
         <option value="grass">Planta</option>
@@ -69,7 +80,7 @@
     </div>
 
     <div>
-      <select name="filter-weaknesses" class="select-filter" id="select-filter-weaknesses">
+      <select name="filter-weaknesses" class="filter" id="filter-select-weaknesses">
         <option class="disabled" disabled selected value>Filtrar por Fraqueza</option>
         <option value="water">Água</option>
         <option value="dragon">Dragão</option>
@@ -80,7 +91,7 @@
         <option value="ice">Gelo</option>
         <option value="bug">Inseto</option>
         <option value="fighting">Lutador</option>
-        <option value="stell">Metálico</option>
+        <option value="steel">Metálico</option>
         <option value="normal">Normal</option>
         <option value="dark">Noturno</option>
         <option value="grass">Planta</option>
@@ -93,17 +104,23 @@
     </div>
 
     <div>
-      <input type="text" class="input-search" id="input-search" placeholder="Procurar Pokémon por nome..."></input>
-      <button type="submit" class="button-search"><i class="fa fa-search"></i></button>
+      <input type="text" class="search" id="search-input" placeholder="Procurar Pokémon por nome..."></input>
+      <button type="submit" class="submit-button"><i class="fa fa-search"></i></button>
+    </div>
+
+    <div>
+      <button type="reset" class="reset-button" id="reset-button">Limpar</button>
     </div>
   </section>
 
-  <section id="filtered-quantity"></section>
+  <section class="aggregate-calculation" id="filtered-quantity"></section>
 
-  <section class="cards" id="print-cards">
-    <div class="front-card"></div>
-    <div class="back-card"></div>
-  </section>
+  <main class="flex-container">
+    <section class="cards" id="print-cards">
+      <div class="front-card"></div>
+      <div class="back-card"></div>
+    </section>
+  </main>
 
   <!--<footer class="footer">©Eliane Gomes Cardozo & @Gabrielle Antunes ||
       <a href="https://pokemongolive.com/pt_br/" target="_blank" rel="noopener noreferrer">PokémonGo</a>
