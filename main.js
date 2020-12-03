@@ -109,4 +109,5 @@ resetButton.addEventListener("click", () => {
   filterSelectWeaknesses.value= "";
   searchInput.value= "";
   orderlySelect.value= "";
+  displayCards(data.pokemon);
 });
