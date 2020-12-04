@@ -17,9 +17,9 @@ function displayCards(pokemons) {
   let printCards = document.querySelector("#print-cards");
   printCards.innerHTML = "";
 
+  const filteredQuantityElement = document.querySelector("#filtered-quantity");
   const totalOfPokemons = data.pokemon.length;
   const filteredPokemons = pokemons.length;
-  const filteredQuantityElement = document.querySelector("#filtered-quantity");
   filteredQuantityElement.innerHTML = "";
 
   if (filteredPokemons < totalOfPokemons) {
@@ -30,27 +30,32 @@ function displayCards(pokemons) {
 
   for (let pokemon of pokemons) {
     const div = document.createElement("div");
-    div.classList.add("div-cards");
+    div.classList.add("cards-div");
+
+    const number = document.createElement("p");
+    number.innerHTML = `# ${pokemon.num}`;
+    div.appendChild(number);
+    div.classList.add("cards-number");
+
+    const name = document.createElement("h2");
+    name.innerHTML = pokemon.name.replace("(female)", "").replace("(male)", "");
+    div.appendChild(name);
+    div.classList.add("cards-name");
 
     const image = document.createElement("img");
     image.src = pokemon.img;
     div.appendChild(image);
-    div.classList.add("image-cards");
-
-    const name = document.createElement("h2");
-    name.innerHTML = pokemon.name;
-    div.appendChild(name);
-    div.classList.add("name-cards");
-
-    const number = document.createElement("p");
-    number.innerHTML = pokemon.num;
-    div.appendChild(number);
-    div.classList.add("number-cards");
+    div.classList.add("cards-image");
 
     const type = document.createElement("p");
-    type.innerHTML = pokemon.type;
+    type.innerHTML = `Tipo: ${pokemon.type.join(", ")}`;
     div.appendChild(type);
-    div.classList.add("type-cards");
+    div.classList.add("cards-type");
+
+    const generation = document.createElement("p");
+    generation.innerHTML = `Região: ${pokemon.generation.name}`;
+    div.appendChild(generation);
+    div.classList.add("cards-generation");
 
     printCards.appendChild(div);
   }
@@ -109,4 +114,5 @@ resetButton.addEventListener("click", () => {
   filterSelectWeaknesses.value= "";
   searchInput.value= "";
   orderlySelect.value= "";
+  displayCards(data.pokemon);
 });
