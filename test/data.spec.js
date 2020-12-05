@@ -275,8 +275,8 @@ describe("selectResistant deve:", () => {
   });
 });
 describe("selectWeaknesses deve:", () => {
-  it("filtrar um array pela fraquesa do pokémon", () => {
-    const arrayDeObjetosFraquesa = [
+  it("filtrar um array pela fraqueza do pokémon", () => {
+    const arrayDeObjetosFraqueza = [
       {
         name: "natu",
         type: [
@@ -349,7 +349,7 @@ describe("selectWeaknesses deve:", () => {
       },
 
     ];
-    const resultadoEsperaFiltroFraquesa= [
+    const resultadoEsperaFiltroFraqueza= [
       {
         name: "natu",
         type: [
@@ -385,7 +385,7 @@ describe("selectWeaknesses deve:", () => {
         ],
       },
     ];
-    expect(selectWeaknesses("ghost",arrayDeObjetosFraquesa)).toEqual(resultadoEsperaFiltroFraquesa);
+    expect(selectWeaknesses("ghost",arrayDeObjetosFraqueza)).toEqual(resultadoEsperaFiltroFraqueza);
   });
 });
 describe("search deve:", () => {
