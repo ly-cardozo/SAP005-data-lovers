@@ -24,7 +24,7 @@ function displayCards(pokemons) {
 
   if (filteredPokemons < totalOfPokemons) {
     const filteredQuantityText = document.createElement("p");
-    filteredQuantityText.innerText = `Foram encontrados ${filteredPokemons} de ${totalOfPokemons} pokémons (${getPercentage(filteredPokemons, totalOfPokemons).toFixed(2)}%).`;
+    filteredQuantityText.innerText = `Foram encontrados ${filteredPokemons} de ${totalOfPokemons} pokémons (${getPercentage(filteredPokemons, totalOfPokemons).toFixed(2)}%)`;
     filteredQuantityElement.append(filteredQuantityText);
   }
 
@@ -35,27 +35,27 @@ function displayCards(pokemons) {
     const number = document.createElement("p");
     number.innerHTML = `# ${pokemon.num}`;
     div.appendChild(number);
-    div.classList.add("cards-number");
+    number.classList.add("cards-number");
 
     const name = document.createElement("h2");
     name.innerHTML = pokemon.name.replace("(female)", "").replace("(male)", "");
     div.appendChild(name);
-    div.classList.add("cards-name");
+    name.classList.add("cards-name");
 
     const image = document.createElement("img");
     image.src = pokemon.img;
     div.appendChild(image);
-    div.classList.add("cards-image");
+    image.classList.add("cards-image");
 
     const type = document.createElement("p");
     type.innerHTML = `Tipo: ${pokemon.type.join(", ")}`;
     div.appendChild(type);
-    div.classList.add("cards-type");
+    type.classList.add("cards-type");
 
     const generation = document.createElement("p");
     generation.innerHTML = `Região: ${pokemon.generation.name}`;
     div.appendChild(generation);
-    div.classList.add("cards-generation");
+    generation.classList.add("cards-generation");
 
     printCards.appendChild(div);
   }
