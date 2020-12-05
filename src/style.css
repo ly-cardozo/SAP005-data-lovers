@@ -25,13 +25,13 @@ body {
     background-color: #525aac;
     background-image: url(img/Pokeball.png);
     background-repeat: no-repeat;
-    background-position: top 2px left 120px;
+    background-position: top 2px left 100px;
 }
 
 /* LOGO: GUIA DO MESTRE POKÉMON */
 
 .logo {
-    width: 1000px;
+    width: 1050px;
     margin: 70px 0 70px 200px;
 }
 
@@ -75,7 +75,7 @@ body {
     border-radius: 6px;
     display: block;
     margin: 10px;
-    width: 290px;
+    width: 275px;
     padding: 0.5em; 
     font-size: 20px;
 }
@@ -184,11 +184,10 @@ body {
 /* RODAPÉ */
 
 .footer-container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    position:relative;
+    padding: 0.5em ;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
     background-color: #525aac;
 }
 
@@ -208,251 +207,79 @@ a:hover {
 }
 
 
-/* @media only screen and (max-width:359px) {
-    .links-style {
-        font-size: 0.7em;
-}
-
-    .title-img {
-        height: 21%;width: 90%;
-}
-
-    .filters-style {
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 15px;
-}
-
-    .search-style,
-    .options-style {
-        margin-bottom: 4px;
-        width: 80%;
-}
-
-    .options-style {
-        text-align: center;
-    }
-
-    .search-style {
-        display: flex;
-        justify-content: center;
-        margin-left: 8px;
-}
-
-    .options-style,
-    .input,
-    .button {
-        font-size: 0.7em;
-}
-
-    .input {
-        width: 85%;
-}
-    .button {
-        width: 15%;
-}
-
-    .box-container {
-        height: 330px;
-        width: 190px;
-}
-
-    .title-poke {
-        font-size: 1.1em;
-}
-
-    .subtitle-poke,
-    .items-poke {
-        font-size: 0.8em;
-}
-
-    .items-poke {
-        margin: 0 0 3px 0;
-        padding: 5px;
-}
-
-    .modal-content{
-        margin: 48% 8%;
-        padding: 0;
-        width: 80%;
-}
-
-    .footer-style h3 {
-        font-size: 0.8em
-}
-
-    .footer-style a {
-      font-size: inherit;
-    }
+@media (min-width: 360px) and (max-width: 812px) {
+  body {
+    width:100vw;
   }
-  
-  @media only screen and (min-width:360px) and (max-width:560px) {
-    .links-style {
-      font-size: 0.75em;
-    }
-  
-    .title-img {
-      height: 21%;
-      width: 75%;
-    }
-  
-    .filters-style {
-      align-items: center;
-      flex-direction: column;
-      flex-wrap: wrap;
-      margin: 30px;
-    }
-  
-    .search-style,
-    .options-style {
-      margin-bottom: 5px;
-      width: 75%;
-    }
-  
-    .options-style {
-      text-align: center;
-    }
-  
-    .search-style {
-      display: flex;
-      justify-content: center;
-      margin-left: 8px;
-    }
-  
-    .options-style,
-    .input,
-    .button {
-      font-size: 0.8em;
-    }
-  
-    .input {
-      width: 85%;
-    }
-  
-    .button {
-      width: 15%;
-    }
-  
-    .box-container {
-      height: 350px;
-      width: 200px;
-    }
-  
-    .title-poke {
-      font-size: 1.2em;
-    }
-  
-    .subtitle-poke,
-    .items-poke {
-      font-size: 1em;
-    }
-  
-    .items-poke {
-      margin: 0 0 4px 0;
-      padding: 5px;
-    }
-  
-    .modal-content {
-      margin: 60% 15%;
-      padding: 0;
-      width: 80%;
-    }
-  
-    .modal-style {
-      height: 35%;
-    }
-  
-    .footer-style h3 {
-      font-size: 1em
-    }
-  
-    .footer-style a {
-      font-size: inherit;
-    }
-  
+  .container-title {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    background-position: top 20px center;
+    background-size: 60%;
   }
-  
-  @media only screen and (min-width:561px) and (max-width:768px) {
-    .links-style {
-      font-size: 1.3em;
-    }
-  
-    .ul-link {
-      padding: 3px;
-    }
-  
-    .title-img {
-      height: 21%;
-      width: 75%;
-    }
-  
-    .filters-style {
-      align-items: center;
-      flex-direction: column;
-      flex-wrap: wrap;
-      margin: 30px;
-    }
-  
-    .search-style,
-    .options-style {
-      margin-bottom: 5px;
-      width: 70%;
-    }
-  
-    .options-style {
-      text-align: center;
-    }
-  
-    .search-style {
-      display: flex;
-      justify-content: center;
-      margin-left: 8px;
-    }
-  
-    .options-style,
-    .input,
-    .button {
-      font-size: 0.9em;
-    }
-  
-    .input {
-      width: 85%;
-    }
-  
-    .button {
-      width: 15%;
-    }
-  
-    .box-container {
-      height: 350px;
-      width: 190px;
-    }
-  
-    .title-poke {
-      font-size: 1.3em;
-    }
-  
-    .subtitle-poke,
-    .items-poke {
-      font-size: 0.9em;
-    }
-  
-    .items-poke {
-      margin: 0 0 5px 0;
-      padding: 5px;
-    }
-  
-    .modal-content {
-      margin: 40% 24%;
-      padding: 0;
-      width: 50%;
-    }
-  
-    .modal-style {
-      height: 35%;
-    }
-  } */
+  .logo {
+    max-width: 85vw;
+    max-height: 100vh;
+    margin: 45px -13px 50px -13px;
+  }
+  .container-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-content: stretch;
+    justify-content: center;
+  }
+  .cards-number {
+    border: none;
+    border-radius: 15px 15px 0 0;
+    padding: 0.5em ;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .cards-name {
+    padding: 0.4em ;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .cards-image {
+    width: 150px;
+  }
+  .cards-type {
+    padding: 0.3em ;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  .cards-generation {
+    padding: 0.5em ;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+.footer-container {
+  padding: 0.5em ;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bolder;
+  }
+}
+.footer {
+  font-weight: bolder;
+  padding: 1.5em;
+  text-align: center;
+}
+
+
 
 
 /* mobile ~ max-width: 480px
